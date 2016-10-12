@@ -1,12 +1,26 @@
 Rails.application.routes.draw do
+  get 'pages/home'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
+  
+  #point to the pages controller that you just made #MDM
+  # rails generate controller pages home
+  root 'pages#home'
+  # a long way to write the above is:  #MDM
+  # get '/' => 'pages#home'
+  
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
+
+  # Regular routes
+  # Point the /about URL to the 'about' page #MDM
+  get 'about' => 'pages#about'
+  get 'contact-us' => 'pages#contact-us'
 
   # Example of named route that can be invoked with purchase_url(id: product.id)
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
