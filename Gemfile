@@ -7,6 +7,7 @@ source 'https://rubygems.org'
 #For this class use rails 5.0.0.1 #MDM
 gem 'rails', '5.0.0.1'
 
+
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
 # Use SCSS for stylesheets
@@ -35,6 +36,10 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
+
+# Add in Bootstrap for Rails. #MDM
+gem 'bootstrap', '~> 4.0.0.alpha4'
+
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
