@@ -1,5 +1,15 @@
 Rails.application.routes.draw do
+  devise_for :users
   get 'pages/home'
+
+
+  # To make the routes for signing in and out easier to use. #MDM
+  # Note, don''t use hyphens in the path, but you can use underscores #MDM
+  as :user do
+    get     "signin" =>       'devise/sessions#new'
+    delete  "signout" =>      'devise/sessions#destroy'     #Now you can use signout_path #MDM
+    get     'signup' =>       'devise/registrations#new'
+  end    
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

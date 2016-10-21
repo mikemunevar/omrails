@@ -10,7 +10,8 @@ ruby "2.3.0"
 #For this class use rails 5.0.0.1 #MDM
 gem 'rails', '5.0.0.1'
 
-
+#  Add Devise for user authentication
+gem 'devise'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
