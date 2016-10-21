@@ -13,9 +13,8 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
-//= require_tree .
-
 
 //  Add in bootstrap Sprockets to install boostrap#MDM
 //= require bootstrap-sprockets
 
+//= require_tree .
