@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  ActiveAdmin.routes(self)
+  resources :tweets
   devise_for :users
   get 'pages/home'
 

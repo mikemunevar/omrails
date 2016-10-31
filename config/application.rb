@@ -21,6 +21,10 @@ module Workspace
     # config.i18n.default_locale = :de
 
     # Do not swallow errors in after_commit/after_rollback callbacks.
+    # This line was already in the file, perhaps it needs to be removed(Mattan did not have it) #MDM
     config.active_record.raise_in_transactional_callbacks = true
+    
+    # Need to add this for activeadmin #MDM
+    config.app_generators.scaffold_controller = :scaffold_controller
   end
 end

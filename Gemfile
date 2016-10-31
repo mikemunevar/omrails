@@ -10,8 +10,14 @@ ruby "2.3.0"
 #For this class use rails 5.0.0.1 #MDM
 gem 'rails', '5.0.0.1'
 
-#  Add Devise for user authentication
+#  Add Devise for user authentication #MDM
 gem 'devise'
+
+# Let's use Active admin for user managment features #MDM
+gem 'activeadmin', '~> 1.0.0.pre4'
+# Also install a copy of inherited resources, becasue we are working iwth rails 5, and not all resources have been migrated just yet. #MDM
+gem 'inherited_resources', github: 'activeadmin/inherited_resources'
+
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
@@ -54,6 +60,8 @@ group :development, :test do
   
 end
 
+
+
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console', '~> 2.0'
@@ -61,6 +69,8 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
 end
+
+
 
 # Add the pg database to production for Heroku #MDM
 group :production do
