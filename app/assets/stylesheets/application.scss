@@ -2,6 +2,9 @@
    Make sure to rename the file to dot scss. */
 
 
+// Import all your hand-crafted custom CSS using this file: #MDM
+@import "bootstrap_customizations";
+
 // Custom bootstrap variables must be set or imported before bootstrap itself. #MDM
 @import "bootstrap";
 
