@@ -11,17 +11,20 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <!--Add bootstrap formatting, form-group  and form-control#MDM-->
+  <!-- By removing the following code, you actually remove teh need to specify a user_id when creating a new tweet #MDM
+  <div class="form-group">
     <%= f.label :user_id %>
-    <%= f.text_field :user_id %>
+    <%= f.text_field :user_id, class: "form-control" %>
   </div>
+  -->
 
-  <div class="field">
+  <div class="form-group">
     <%= f.label :content %>
-    <%= f.text_area :content %>
+    <%= f.text_area :content, class: "form-control" %>
   </div>
 
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+  <!--<div class="actions">-->
+    <%= f.submit class: "btn btn-primary" %>
+  <!--</div>-->
 <% end %>

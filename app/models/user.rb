@@ -5,4 +5,7 @@ class User < ApplicationRecord
 # Remove the :recoverable section to disable the "forgot my password" feature
 #         :recoverable,  :rememberable, :trackable, :validatable
                          :rememberable, :trackable, :validatable
+
+    # Make sure to define that you have access to many tweets. #MDM
+    has_many :tweets
 end
