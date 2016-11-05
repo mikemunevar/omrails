@@ -1,5 +1,10 @@
-<h1>New Piece</h1>
+<!--Place the follwing in the class="container" class for nicer bootstrap formatting. #MDM-->
+<div class="container">
 
-<%= render 'form', piece: @piece %>
+    <h1>New Piece</h1>
+    
+    <%= render 'form', piece: @piece %>
+    
+    <%= link_to 'Back', pieces_path %>
 
-<%= link_to 'Back', pieces_path %>
+</div>

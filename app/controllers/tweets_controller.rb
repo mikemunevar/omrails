@@ -4,7 +4,7 @@ class TweetsController < ApplicationController
   before_action :authenticate_user!, except: [:index, :show]
   
   
-  # Move the next line directly into each function
+  # Move the next line directly into each function #MDM
   # before_action :set_tweet, only: [:show, :edit, :update, :destroy]
 
   # GET /tweets

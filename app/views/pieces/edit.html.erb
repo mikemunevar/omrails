@@ -1,6 +1,11 @@
-<h1>Editing Piece</h1>
+<div class="container">
 
-<%= render 'form', piece: @piece %>
+    <h1>Editing Piece</h1>
+    
+    <%= render 'form', piece: @piece %>
+    
+    <%= link_to 'Show', @piece %> |
+    <%= link_to 'Back', pieces_path %>
 
-<%= link_to 'Show', @piece %> |
-<%= link_to 'Back', pieces_path %>
+
+</div>

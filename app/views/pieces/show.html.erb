@@ -1,34 +1,39 @@
-<p id="notice"><%= notice %></p>
+ <div class="container">
+ 
+ 
+  <p id="notice"><%= notice %></p>
+  
+  <p>
+    <strong>Title:</strong>
+    <%= @piece.title %>
+  </p>
+  
+  <p>
+    <strong>Artist name:</strong>
+    <%= @piece.artist_name %>
+  </p>
+  
+  <p>
+    <strong>Length:</strong>
+    <%= @piece.length %>
+  </p>
+  
+  <p>
+    <strong>Width:</strong>
+    <%= @piece.width %>
+  </p>
+  
+  <p>
+    <strong>Height:</strong>
+    <%= @piece.height %>
+  </p>
+  
+  <p>
+    <strong>Year:</strong>
+    <%= @piece.year %>
+  </p>
+  
+  <%= link_to 'Edit', edit_piece_path(@piece) %> |
+  <%= link_to 'Back', pieces_path %>
 
-<p>
-  <strong>Title:</strong>
-  <%= @piece.title %>
-</p>
-
-<p>
-  <strong>Artist name:</strong>
-  <%= @piece.artist_name %>
-</p>
-
-<p>
-  <strong>Length:</strong>
-  <%= @piece.length %>
-</p>
-
-<p>
-  <strong>Width:</strong>
-  <%= @piece.width %>
-</p>
-
-<p>
-  <strong>Height:</strong>
-  <%= @piece.height %>
-</p>
-
-<p>
-  <strong>Year:</strong>
-  <%= @piece.year %>
-</p>
-
-<%= link_to 'Edit', edit_piece_path(@piece) %> |
-<%= link_to 'Back', pieces_path %>
+</div>

@@ -8,4 +8,7 @@ class User < ApplicationRecord
 
     # Make sure to define that you have access to many tweets. #MDM
     has_many :tweets
+    
+    # Remember to define that a user may has_many pieces relationship
+    has_many :pieces
 end
