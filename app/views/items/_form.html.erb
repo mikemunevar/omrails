@@ -1,0 +1,61 @@
+<div class="container">
+
+  
+  <%= form_for(item) do |f| %>
+    <% if item.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(item.errors.count, "error") %> prohibited this item from being saved:</h2>
+  
+        <ul>
+        <% item.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+        </ul>
+      </div>
+    <% end %>
+  
+    <!--Delete the user_id part-->
+    <!--<div class="field">-->
+    <!--  <%= f.label :user_id %>-->
+    <!--  <%= f.text_field :user_id %>-->
+    <!--</div>-->
+  
+  
+    <!--Update each part of the form with this new template. #MDM-->
+    <!--<div class="field">-->
+    <!--  <%= f.label :title %>-->
+    <!--  <%= f.text_field :title %>-->
+    <!--</div>-->
+    <div class="form-group">
+      <%= f.label :title %>
+      <%= f.text_field :title, class: "form-control" %>
+    </div>
+  
+    <!--<div class="field">-->
+    <!--  <%= f.label :url %>-->
+    <!--  <%= f.text_field :url %>-->
+    <!--</div>-->
+    <div class="form-group">
+      <%= f.label :url %>
+      <%= f.text_field :url, class: "form-control" %>
+    </div>
+  
+    <p><strong>or</strong></p>
+  
+    <!--<div class="field">-->
+    <!--  <%= f.label :text %>-->
+    <!--  <%= f.text_area :text %>-->
+    <!--</div>-->
+    <div class="form-group">
+      <%= f.label :text %>
+      <%= f.text_area :text, class: "form-control" %>
+    </div>
+  
+    <div class="actions">
+      <!--<%= f.submit %>-->
+      <%= f.submit class: "btn btn-primary" %>
+  
+    </div>
+  <% end %>
+  
+</div>

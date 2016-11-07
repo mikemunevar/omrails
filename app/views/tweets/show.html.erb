@@ -1,23 +1,40 @@
+<!--These three bootstrap classes assist in lining things up.-->
 <div class="container">
-  
+  <div class="row">
+    <div class="offset-md-2 col-md-8">
+      <div class="card card-block">
+        <h4 class="card-title"><%= @tweet.user.email %></h4>
+        <p class="card-text"><%= @tweet.content %></p>
+        <!--<a href="#" class="card-link">Card link</a>-->
+        <% if @tweet.user == current_user %>
+          <%= link_to 'Edit', edit_tweet_path(@tweet), class: "card-link" %>
+          <!--Add in a delete tweet link-->
+          <%= link_to 'Delete', @tweet method: :delete, class: "card-link" %>
+          
+        <% end %>        
+        <!--<a href="#" class="card-link">Another link</a>-->
+        <%= link_to 'Back', tweets_path, class: "card-link" %>
+      </div>
+        
 
-  <p id="notice"><%= notice %></p>
-  
-  <p>
-    <strong>User:</strong>
-    <%= @tweet.user %>
-  </p>
-  
-  <p>
-    <strong>Content:</strong>
-    <%= @tweet.content %>
-  </p>
-  
-  <!-- Only if the tweet belongs to the current user #MDM-->
-  <% if @tweet.user == current_user %>
-    <%= link_to 'Edit', edit_tweet_path(@tweet) %> |
-  <% end %>
-  
-  <%= link_to 'Back', tweets_path %>
-
+      <!--<p id="notice"><%= notice %></p>-->
+      
+      <!--<p>-->
+      <!--  <strong>User:</strong>-->
+      <!--  <%= @tweet.user %>-->
+      <!--</p>-->
+      
+      <!--<p>-->
+      <!--  <strong>Content:</strong>-->
+      <!--  <%= @tweet.content %>-->
+      <!--</p>-->
+      
+      <!-- Only if the tweet belongs to the current user #MDM-->
+      <!--<% if @tweet.user == current_user %>-->
+      <!--  <%= link_to 'Edit', edit_tweet_path(@tweet) %> |-->
+      <!--<% end %>-->
+      
+      <!--<%= link_to 'Back', tweets_path %>-->
+    </div>
+  </div>
 </div>

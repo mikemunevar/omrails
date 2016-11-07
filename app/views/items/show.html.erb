@@ -1,0 +1,40 @@
+<div class="container">
+  <p id="notice"><%= notice %></p>
+  
+  <p>
+    <strong>User:</strong>
+    <!-- In order to actually show the email use item.user.email -->
+    <!--<%= @item.user %>-->
+    <%= @item.user.email %>
+
+  </p>
+  
+  <p>
+    <strong>Title:</strong>
+    <%= @item.title %>
+  </p>
+  
+  
+  <!--If the URL field is not empty, then show it.  Otherwise do not show it. #MDM-->
+  <% if @item.url? %>
+    <p>
+      <strong>Url:</strong>
+      <%= @item.url %>
+    </p>
+  <% end %>
+  
+  <!--If the text field is not empty, then show it.  Otherwise do not show it. #MDM-->
+  <% if @item.text? %>
+    <p>
+      <strong>Text:</strong>
+      <%= @item.text %>
+    </p>
+  <% end %>
+  
+  <!--Show the edit link only if the user has permission to edit the link-->
+  <% if @item.user == current_user %>
+    <%= link_to 'Edit', edit_item_path(@item) %> |
+  <% end %>
+  <%= link_to 'Back', items_path %>
+  
+</div>

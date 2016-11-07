@@ -1,39 +1,52 @@
- <div class="container">
- 
- 
-  <p id="notice"><%= notice %></p>
-  
-  <p>
-    <strong>Title:</strong>
-    <%= @piece.title %>
-  </p>
-  
-  <p>
-    <strong>Artist name:</strong>
-    <%= @piece.artist_name %>
-  </p>
-  
-  <p>
-    <strong>Length:</strong>
-    <%= @piece.length %>
-  </p>
-  
-  <p>
-    <strong>Width:</strong>
-    <%= @piece.width %>
-  </p>
-  
-  <p>
-    <strong>Height:</strong>
-    <%= @piece.height %>
-  </p>
-  
-  <p>
-    <strong>Year:</strong>
-    <%= @piece.year %>
-  </p>
-  
-  <%= link_to 'Edit', edit_piece_path(@piece) %> |
-  <%= link_to 'Back', pieces_path %>
+<!--These three bootstrap classes assist in lining things up.-->
+<div class="container">
+  <div class="row">
+    <div class="offset-md-2 col-md-8">
+      <div class="card card-block">
+        <h4 class="card-title">Card title</h4>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <a href="#" class="card-link">Card link</a>
+        <a href="#" class="card-link">Another link</a>
+      </div>
+      
+      
+      <p id="notice"><%= notice %></p>
+      
+      <p>
+        <strong>Title:</strong>
+        <%= @piece.title %>
+      </p>
+      
+      <p>
+        <strong>Artist name:</strong>
+        <%= @piece.artist_name %>
+      </p>
+      
+      <p>
+        <strong>Length:</strong>
+        <%= @piece.length %>
+      </p>
+      
+      <p>
+        <strong>Width:</strong>
+        <%= @piece.width %>
+      </p>
+      
+      <p>
+        <strong>Height:</strong>
+        <%= @piece.height %>
+      </p>
+      
+      <p>
+        <strong>Year:</strong>
+        <%= @piece.year %>
+      </p>
+      
+      <%= link_to 'Edit', edit_piece_path(@piece) %> |
+      <%= link_to 'Back', pieces_path %>
+
+    </div>
+
+  </div>
 
 </div>
