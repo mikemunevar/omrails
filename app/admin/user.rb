@@ -16,12 +16,16 @@ ActiveAdmin.register User do
 # end
 
 # Define that admins can only update emails and admin flag #MDM
-permit_params :email, :admin
+# Remember to add in :name and :username
+permit_params :email, :admin, :name, :username
     
     
 # Customize the User edit form in activeadmin #MDM
     form do |f|
         f.inputs do
+            # Remember to add in newly-created :name and :username #MDM
+            f.input :name
+            f.input :username
             f.input :email
             f.input :admin
         end
@@ -32,6 +36,9 @@ index do
   id_column
   column :email
   column :admin
+#   Add a new column for the newly created name and username field #MDM
+  column :name
+  column :username
   actions
 end
 

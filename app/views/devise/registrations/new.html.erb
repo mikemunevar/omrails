@@ -20,6 +20,18 @@
     <%= f.password_field :password_confirmation, autocomplete: "off", class: "form-control", placeholder: "Confirm Password" %>
   </div>
 
+  <!--Use email as a template and add username here: #MDM-->
+  <div class="form-group">
+    <%= f.label :username %>
+    <%= f.text_field :username, autofocus: true, class: "form-control", placeholder: "Batman" %>
+  </div>
+  
+    <!--Use email as a template and add name here.  Remember to use text_field: #MDM-->
+  <div class="form-group">
+    <%= f.label :name %>
+    <%= f.text_field :name, autofocus: true, class: "form-control", placeholder: "Bruce Wayne" %>
+  </div>
+
   <%= f.submit "Sign up", class: "btn btn-primary" %>
 <% end %>
 

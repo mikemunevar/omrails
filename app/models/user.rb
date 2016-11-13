@@ -14,6 +14,8 @@ class User < ApplicationRecord
     
     # Remember to define that a user may has_many items relationship. You need this so that you can use the current_user data #MDM
     has_many :items
-    
-    
+
+    # Add teh form validation here: Makde minnimum length = 6 #MDM
+    validates :username, presence: true, uniqueness: true, length: { minimum: 6 }
+    validates :name, presence: true
 end

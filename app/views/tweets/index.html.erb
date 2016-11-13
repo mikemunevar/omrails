@@ -9,7 +9,10 @@
        <!--https://v4-alpha.getbootstrap.com/components/card/-->
        <div class="card card-block">
         <h4 class="card-title">Your Account</h4>
-        <p class="card-text">       <%= current_user.email %>  </p>
+        <!--<p class="card-text">       <%= current_user.email %>  </p>-->
+        <!--Make it display the username, not the email address. #MDM-->
+        <p class="card-text">       <%= current_user.username %>  </p>
+
         <!--<a href="#" class="card-link">Card link</a>-->
         <!--<a href="#" class="card-link">Another link</a>-->
       </div>
@@ -45,7 +48,11 @@
             <%=  link_to tweet, class: "list-group-item list-group-item-action active" do %>
               <!--Add in the users email address #MDM-->
               <!--<td><%= tweet.user %></td>-->
-              <h5 class="list-group-item-heading"><%= tweet.user.email %></h5>
+              <!--<h5 class="list-group-item-heading"><%= tweet.user.email %></h5>-->
+              
+              <!--Show the username rather than the email-->
+              <h5 class="list-group-item-heading"><%= tweet.user.username %></h5>
+              
               <!-- if you want to avoid the exception screen, use .try : #MDM-->
               <!--<td><%= tweet.user.try(:email) %></td>-->
               
