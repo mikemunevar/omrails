@@ -1,0 +1,47 @@
+<!--Use bootstrap container class #MDM-->
+<div class="container">
+    
+    <!--<h1>Users#show</h1>-->
+    <!--<p>Find me in app/views/users/show.html.erb</p>-->
+    <!--<h1><%= @user.username %></h1>-->
+    <!--<p> <%= @user.name %> </p>-->
+    
+    <!-- Taken from tweets.html.erb #MDM -->
+  <div class="row">
+    <div class="col-md-4">
+       <div class="card card-block">
+           <!--Replace this line with: #MDM-->
+        <!--<h4 class="card-title">Your Account</h4>-->
+        <h4 class="card-title"><%= @user.username %></h4>
+        
+        <p class="card-text">       <%= link_to @user.name %>  </p>
+      </div>
+    </div>
+    <div class="col-md-8">
+        
+      
+      <h1>Tweets</h1>
+
+      <ul class="list-group">
+          <% @tweets.each do |tweet| %>
+            <%=  link_to tweet, class: "list-group-item list-group-item-action active" do %>
+              <h5 class="list-group-item-heading"><%= tweet.user.username %></h5>
+              <p class="list-group-item-text"><%= tweet.content %></p>
+
+              <% if tweet.user == current_user %>
+                <%= link_to 'Edit', edit_tweet_path(tweet) %>
+                <%= link_to 'Destroy', tweet, method: :delete, data: { confirm: 'Are you sure?' } %>
+              <% end %>
+            <% end %>
+            <p></p> 
+          <% end %>
+       </ul>
+
+    </div>
+
+  </div>
+    
+    
+    
+    
+</div>

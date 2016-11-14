@@ -11,7 +11,9 @@
         <h4 class="card-title">Your Account</h4>
         <!--<p class="card-text">       <%= current_user.email %>  </p>-->
         <!--Make it display the username, not the email address. #MDM-->
-        <p class="card-text">       <%= current_user.username %>  </p>
+        <!--<p class="card-text">       <%=current_user.username %>  </p>-->
+        <!--Add the link_to and make sure to pass the user argument.  This is needed in order to set the username in the path. #MDM-->
+        <p class="card-text">       <%= link_to current_user.username, user_path(current_user.username) %>  </p>
 
         <!--<a href="#" class="card-link">Card link</a>-->
         <!--<a href="#" class="card-link">Another link</a>-->

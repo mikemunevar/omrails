@@ -5,7 +5,9 @@
       <div class="card card-block">
         <!--<h4 class="card-title"><%= @tweet.user.email %></h4>-->
         <!--Show the .username, not the .email.-->
-        <h4 class="card-title"><%= @tweet.user.username %></h4>
+        <!--<h4 class="card-title"><%= @tweet.user.username %></h4>-->
+        <!--Add the /username to the link here: #MDM-->
+        <h4 class="card-title"><%= link_to @tweet.user.username, user_path(@tweet.user.username) %></h4>
         
         <p class="card-text"><%= @tweet.content %></p>
         <!--<a href="#" class="card-link">Card link</a>-->
